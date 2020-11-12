@@ -1,0 +1,70 @@
+<html>
+
+  <head>
+	<title>Surveillance</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<style>
+		.button {padding: 20px; }
+		
+		.btn1 {background-color: #0099ff; color: #0033cc;}
+		.btn2 {background-color: #0099ff; color: white;}
+		.btn3 {background-color: #0099ff; color: white;}
+
+	header {
+  		background-color: #33ccff;
+  		padding: 30px;
+  		text-align: center;
+  		font-size: 35px;
+  		color: white;
+	}
+
+	footer {
+  		background-color: #33ccff;
+  		padding: 10px;
+  		text-align: center;
+  		color: white;
+	}
+
+
+		
+	</style>
+
+
+
+  </head>
+
+        <body>
+		
+		<header>
+  			<h2>Camerasystem - Gates</h2>
+		</header>
+
+
+		<iframe width="560" height="315" id="myframe" src="test1.html"></iframe>
+		<br>
+		<br>
+		<button class="button btn1" onclick="myFunction('test1.html')">PKW CAM 1</button>
+		<button class="button btn2" onclick="myFunction('test2.html')">PKW CAM 2</button>
+		<button class="button btn3" onclick="myFunction('https://www.youtube.com/embed/OWWu05YYbNI?autoplay=1&loop=1')">LKW CAM</button>
+
+		<script>
+			function myFunction(url) {
+  				document.getElementById("myframe").src = url;
+			}
+		</script>
+
+		<footer>
+  			<p>
+			Call Gate: 676
+			<br>
+			Code to open PKW Gate: 20666
+			<br>
+			Code to open LKW Gate: 20999
+			</p>
+		</footer>
+
+		
+
+        </body>
+</html>
