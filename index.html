@@ -7,7 +7,7 @@
 	<style>
 		.button {padding: 20px; }
 		
-		.btn1 {background-color: #0099ff; color: #0033cc;}
+		.btn1 {background-color: #0099ff; color: white;}
 		.btn2 {background-color: #0099ff; color: white;}
 		.btn3 {background-color: #0099ff; color: white;}
 
@@ -17,6 +17,20 @@
   		text-align: center;
   		font-size: 35px;
   		color: white;
+	}
+
+	article: after{
+  		float: right
+  		padding: 20px;
+  		width: 70%;
+  		background-color: #f1f1f1;
+  		height: 500px; /* only for demonstration, should be removed */
+	}
+
+	section{
+  		content: "";
+  		display: table;
+  		clear: both;
 	}
 
 	footer {
@@ -40,19 +54,23 @@
   			<h2>Camerasystem - Gates</h2>
 		</header>
 
-
-		<iframe width="560" height="315" id="myframe" src="test1.html"></iframe>
-		<br>
-		<br>
+		<section>
+		
 		<button class="button btn1" onclick="myFunction('test1.html')">PKW CAM 1</button>
+		<br>
 		<button class="button btn2" onclick="myFunction('test2.html')">PKW CAM 2</button>
+		<br>
 		<button class="button btn3" onclick="myFunction('https://www.youtube.com/embed/OWWu05YYbNI?autoplay=1&loop=1')">LKW CAM</button>
+		<article>
+			<iframe width="560" height="315" id="myframe" src="test1.html"></iframe>
+		</article>
 
 		<script>
 			function myFunction(url) {
   				document.getElementById("myframe").src = url;
 			}
 		</script>
+		</section>
 
 		<footer>
   			<p>
@@ -68,3 +86,4 @@
 
         </body>
 </html>
+
