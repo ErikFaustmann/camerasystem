@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/45467702/alternatives-to-embedded-credentials-in-chrome-for-links-to-third-party-sites
