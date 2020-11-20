@@ -1,0 +1,38 @@
+ <html>
+        <head>
+                <link rel="shortcut icon" href="#">
+        </head>
+        <body>
+                <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+                <video
+                        title="PKW2cam"
+                        webkit-playsinline="true"
+                        playsinline="true"
+                        width="700"
+                        height="600"
+                        id="video-player"
+                        controls preload="none"
+                        autoplay="true"
+                        muted="muted"><source src="video2.m3u8" type="application/x-mpegURL"></video>
+
+                <script>
+                        var video = document.getElementById('video-player');
+
+                        if(Hls.isSupported()) {
+                                var hls = new Hls();
+                                hls.loadSource('video2.m3u8');
+                                hls.attachMedia(video);
+                                hls.on(Hls.Events.MANIFEST_PARSED,function() {
+                                        video.play();
+                                        });
+                                }
+                        else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                                video.src = 'video2.m3u8';
+                                video.addEventListener('loadedmetadata',function() {
+                                        video.play();
+                                });
+                        }
+                </script>
+        </body>
+ </html>
